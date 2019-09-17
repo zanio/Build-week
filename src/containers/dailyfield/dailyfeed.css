@@ -7,9 +7,11 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.Body p{
+.Body .facts{
     align-self: center;
     padding-right: 1rem;
+    font-family: 'Pacifico';
+    font-size: 26px;
 }
 
 @media(max-width:760px){

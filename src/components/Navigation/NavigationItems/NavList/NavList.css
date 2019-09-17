@@ -9,6 +9,7 @@
     color: #8f5c2c;
     text-decoration: none;
     width: 100%;
+    font-family: 'Roboto';
     box-sizing: border-box;
     display: block;
 }
@@ -25,6 +26,7 @@
         margin: 0;
         display: flex;
         align-items: center;
+        justify-content: space-evenly;
         height: 100%;
         width: auto;
     }
@@ -37,11 +39,8 @@
      
     }
     
-    .NavList a:hover,
-    .NavList a:active,
     .NavList a.active{
-        background-color: #8f5c2c;
-        border-bottom: 4px solid #40a4c8;
-        color: white;
+        color: rgba(255, 193, 241, 0.99);
+    
     }
 }
