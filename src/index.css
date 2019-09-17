@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', serif;
+    color: black;
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Acme|Pacifico|Roboto:400,400i,500,700&display=swap');  

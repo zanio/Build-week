@@ -4,6 +4,8 @@ import classes from './SideDrawer.css';
 // import Logo from '../../Logo/Logo';
 import NavItem from '../NavigationItems/NavItem';
 import Backdrop from '../../../UI/Backdrop/Backdrop';
+import SVG from 'react-inlinesvg';
+import logo from '../../../assets/icons/Cat Facts.svg';
 
 
 const SideDrawer = (props)=>{
@@ -23,7 +25,7 @@ const SideDrawer = (props)=>{
    <div className={attachedSideDrawer.join(' ')} onClick={props.close}>
    
         <div className = {classes.Logo}> 
-           <div>Your Logo Goes</div>
+        <SVG src={logo} />
         </div>
             <nav>
             <NavItem />

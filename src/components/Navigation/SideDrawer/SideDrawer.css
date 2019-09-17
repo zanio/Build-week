@@ -6,20 +6,21 @@
     left: 0;
     top: 0;
     z-index: 200;
-    background-color: white;
+    background-color: #13435F;
+    box-shadow: -3px 4px 7px rgba(0, 0, 0, 0.15);
     padding:32px 16px;
     box-sizing: border-box;
     transition: transform .5s ease-in;
-    border-bottom: solid 10px rgba(128, 77, 0, 0.116);
-    border-right: solid 10px rgba(128, 77, 0, 0.116);
-    border-left: solid 10px rgba(128, 77, 0, 0.116);
 
 }
 
 @media (min-width:500px){
     .SideDrawer{
         display: none;
+        box-shadow: 5px 4px 7px rgba(0, 0, 0, .99);
+
     }
+    
 }
 
 .Open {
@@ -30,7 +31,8 @@
     transform: translateX(-100%);
 }
 .Logo{
-    height: 11%;
-    margin-bottom: 32px;
+width: 60%;
+height: auto;
+margin-bottom: 32px;
 }
 

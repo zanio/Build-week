@@ -1,9 +1,10 @@
 import React from 'react';
 import classes from './Toolbar.css';
-// import Logo from '../../assets/Images';
 import NavItem from '../NavigationItems/NavItem';
 import Hamburgger from '../Toolbar/Hambugger/Hamburgger';
-import classe from '../SideDrawer/SideDrawer.css'
+import classe from '../SideDrawer/SideDrawer.css';
+import SVG from 'react-inlinesvg';
+import logo from '../../../assets/icons/Cat Facts.svg';
 
 const Toolbar = (props)=>{
 
@@ -15,11 +16,11 @@ const Toolbar = (props)=>{
 
   return(  <header className={classes.Toolbar}>
         <Hamburgger  clicked ={props.close} />
-    {/* <div className={classes.Logo}>
-      
-       </div> */}
+    <div className={classes.Logo}>
+        <SVG src={logo} />
+       </div>
         <nav className={classes.DesktopOnly}>
-            <NavItem/>
+            <NavItem />
         </nav>
         
     </header>

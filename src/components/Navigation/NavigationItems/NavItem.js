@@ -10,7 +10,8 @@ import { withRouter } from 'react-router-dom';
 const NavItem = (props)=>(
 
     <ul className={classes.NavItem}> 
-    <NavList link="/" exact> Home </NavList>
+    <NavList link="/" exact> Daily Cat Feed </NavList>
+      <NavList link="/morefacts" exact> More Facts </NavList>
       <NavList link="/Catbreads" exact> Cat Breads </NavList>
     </ul>
 

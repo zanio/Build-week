@@ -18,6 +18,10 @@ module.exports = {
         },
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
+      },
+      {
         test: /\.css$/,
         use: [
           require.resolve('style-loader'),
