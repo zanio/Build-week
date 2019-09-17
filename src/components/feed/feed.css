@@ -7,15 +7,31 @@
 
 .Feed p {
     padding: 83px 65px 103px 63px;
+    font-family: 'Acme';
+    font-size: 1.3rem;
+    text-align: center;
+
 
 }
-.Feed div {
+.Feed .day {
    position: absolute;
    left: 30%;
-   top: -5%;
+   top: -11.5%;
    background: #1F4D67;
    padding: .5rem;
    color:white;
+
+}
+.Feed .triangle {
+   position: absolute;
+   left: -5.5%;
+   top: 40%;
+   width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent; 
+  
+  border-right:20px solid #1F4D67; 
 
 }
 @media(max-width:760px){
@@ -23,10 +39,22 @@
         padding: 1rem 3rem;
     
     }
-    .Feed div {
+    .Feed .triangle {
+        position: absolute;
+        left: -7%;
+        top: 40%;
+        
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        
+        border-bottom: 20px solid #1F4D67;     
+     }
+    .Feed .day {
         position: absolute;
         left: 12%;
-        top: -5%;
+        top: -10%;
         color:white;
         background: #1F4D67;
         padding: .2rem;

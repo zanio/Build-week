@@ -1,15 +1,23 @@
 .Layout{
-    max-width: 1800px;
-    margin: 0 auto;
-    padding-left: 5.5rem;
-    padding-right: 5.5rem;
     background-color: rgb(50, 50, 66);
     background-color: #13435F;
-    padding: 4rem 1rem;
+    padding: 4rem 5rem;
     color: whitesmoke;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #A2BAC8;
+}
+.inline{
+    display: inline;
+}
+.float{
+    display: flex !important;
+    flex-direction: row;
 }
 @media(max-width:760px){
     .Layout{
@@ -30,8 +38,24 @@
     width: 20%;
     height: auto;
 }
-.row{
+.icon{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    width: 30%;
+    justify-content: space-between;
+}
+.icon a{
+    text-decoration: none;
+}
+.icon a:active{
+    text-decoration: none;
+}
+.icon i{
+    cursor: pointer;
+}
+@media(max-width:760px){
+    .icon{
+        width: 30%;
+        margin: 0 auto;
+    } 
 }
