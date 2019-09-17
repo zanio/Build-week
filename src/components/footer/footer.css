@@ -1,5 +1,8 @@
 .Layout{
-   
+    max-width: 1800px;
+    margin: 0 auto;
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
     background-color: rgb(50, 50, 66);
     background-color: #13435F;
     padding: 4rem 1rem;
