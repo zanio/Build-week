@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import classes from '../components/layout/layout.css';
 import Layout from '../components/layout/layout'
 import Footer from '../components/footer/footer';
-import asyncComponent from '../services/asyncComponent/asyncComponent';
 import DailyFeed from '../containers/dailyfield/dailyfeed'
 import Morefeed from '../containers/moreFeeds/morefeeds'
 
