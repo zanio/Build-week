@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from './feedTemplate.css';
+import Spinner from '../../UI/Spinner/spinner';
 
 
 
 
 const FeedTemplate  = props =>{
 
-    let text = null;
     if(props.data.length > 0){
         props.data.map(p => {
             text = (<div className={classes.Feed}>
@@ -17,7 +17,7 @@ const FeedTemplate  = props =>{
 
 return(
     <React.Fragment>
-        {text}
+        {}
     </React.Fragment>
     )
   

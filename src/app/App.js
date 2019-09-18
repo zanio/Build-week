@@ -7,13 +7,16 @@ import Layout from '../components/layout/layout'
 import Footer from '../components/footer/footer';
 import DailyFeed from '../containers/dailyfield/dailyfeed'
 import Morefeed from '../containers/moreFeeds/morefeeds'
+import * as actionCreator from '../store/actions/index'
 
 
 
-const App = props => {
-  console.log(process.env.API_KEY)
+const App = props => {  
+  useEffect(()=>{
+    props.onDeliverTodayFeed();
+  },[]);  
   
-   return (
+  return (
      <React.Fragment>
       <Layout>
         
@@ -28,6 +31,16 @@ const App = props => {
   
 }
 
+const mapStateToProps = state =>{
+  return {
+    todayFeed:state.DailyFeedReducer.data
+  }
+}
 
+const mapDispatchToProps = dispatch => {
+  return { 
+      onDeliverTodayFeed: ()=> dispatch(actionCreator.feedCheckState()),
+  };
+}
 
-export default App;
+export default withRouter( connect(mapStateToProps, mapDispatchToProps)(App));

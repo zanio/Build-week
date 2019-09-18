@@ -8,28 +8,23 @@ import Spinner from '../../UI/Spinner/spinner'
 
 
 const DailyFeed = (props) => {
-    
-    useEffect(()=>{
-        props.onGetDailyFeed();
-        console.log(props)
-      },[]);
 
     let content = null;
 
     if(props.loadingSpinner){
-        content = <Spinner />
+        content = <Spinner/>
     }
     if(props.errorMessage){
-        content = <p>{props.errorMessage}</p>
+        content = <Feed  error = {props.errorMessage.message}/>
     }
     if(props.posts){
-        content = <Feed  data= {props.posts}/>
+        content = <Feed  data= {props.data}/>
     }
 
     return(
         <React.Fragment>
         <div className={classes.Body}>
-            <p className={classes.facts}>Gets Dialy Facts About Cats. 
+            <p className={classes.facts}>Gets Dialy Facts About Cats.
                 Even if you don’t have a cat this facts would interest you to know!</p>
         {content}
  </div>
@@ -39,16 +34,11 @@ const DailyFeed = (props) => {
 
 const mapStateToProps = state =>{
     return {
-        loadingSpinner: state.DailyFeedReducer.loading,
+        loadingSpinner:state.DailyFeedReducer.loading,
         errorMessage:state.DailyFeedReducer.error,
         posts:state.DailyFeedReducer.data,
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        onGetDailyFeed: () => dispatch(actionCreator.FetchDailyFeedAction() ),
-    }
-}
 
-export default connect(mapStateToProps,mapDispatchToProps)(DailyFeed);
+export default connect(mapStateToProps,null)(DailyFeed);

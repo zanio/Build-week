@@ -3,6 +3,7 @@
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
     border-radius: 27px;
     position: relative;
+    width: 55%;
 }
 
 .Feed p {
@@ -58,6 +59,11 @@
         color:white;
         background: #1F4D67;
         padding: .2rem;
+     
+     }
+    .Feed {
+        width: unset;
+
      
      }
 }
