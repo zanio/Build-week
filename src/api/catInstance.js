@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const catInstance = axios.create({
-    baseURL:`http://catfact.ninja`
+  baseURL: 'https://propertpro-lite.herokuapp.com',
 });
 
 export default catInstance;
