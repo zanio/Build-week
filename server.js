@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'production') {
   app.use(express.static('dist'));
   const path = require('path');
 
