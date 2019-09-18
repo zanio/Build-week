@@ -7,11 +7,9 @@ import Layout from '../components/layout/layout'
 import Footer from '../components/footer/footer';
 import asyncComponent from '../services/asyncComponent/asyncComponent';
 import DailyFeed from '../containers/dailyfield/dailyfeed'
+import Morefeed from '../containers/morefeeds/morefeeds'
 
 
-// const DailyFeed = asyncComponent( () => {
-//   return import('../containers/dailyfeed');
-// });
 
 const App = props => {
   
@@ -20,6 +18,7 @@ const App = props => {
       <Layout>
         
       <Switch>
+      <Route path="/morefacts"  component = {Morefeed} />
       <Route path="/" exact component = {DailyFeed} />
       </Switch>
       </Layout>

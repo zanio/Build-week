@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const instance = axios.create({
-    baseURL:`https://burgerapp-order.firebaseio.com/`
+const catInstance = axios.create({
+    baseURL:`http://catfact.ninja`
 });
 
-export default instance;
+export default catInstance;

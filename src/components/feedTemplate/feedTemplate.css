@@ -1,0 +1,22 @@
+.Feed{
+    border: 3px solid #1F4D67;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 27px;
+    position: relative;
+}
+
+.Feed p {
+    padding: 83px 65px 103px 63px;
+    font-family: 'Acme';
+    font-size: 1.3rem;
+    text-align: center;
+
+
+}
+
+@media(max-width:760px){
+    .Feed p {
+        padding: 1rem 3rem;
+    
+    }
+}

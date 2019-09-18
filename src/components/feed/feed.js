@@ -15,7 +15,7 @@ return(
         <div className={classes.Feed}>
             <div className={classes.triangle}></div>
             <div className={classes.day}>Day 27th Facts in Sept, 2019</div>
-            <p>In relation to their body size, cats have the largest eyes of any mammal</p>
+            <p>{props.data}</p>
         </div>
     </React.Fragment>
     )
