@@ -3,11 +3,13 @@ export const utility = (oldstate, elementState) => ({
   ...elementState,
 });
 
-export const getNextDay = () => (new Date().getTime()) * 24;
+export const getNextDay = () => {
+  const date = new Date();
+  return date.setDate(date.getDate() + 1);
+};
 
 export const randomizeFeed = (array) => {
-  const id = Math.ceil(Math.random() * 4) - 1;
-  console.log(new Date().getTime());
+  const id = Math.ceil(Math.random() * 227) - 1;
   const content = array.filter((n, i) => i == id);
   return content;
 };

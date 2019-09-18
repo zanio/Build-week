@@ -18,8 +18,9 @@ const DailyFeed = (props) => {
         content = <Feed  error = {props.errorMessage.message}/>
     }
     if(props.posts){
-        content = <Feed  data= {props.data}/>
+        content = <Feed  data= {props.posts[0].text}/>
     }
+    console.log(props.posts)
 
     return(
         <React.Fragment>

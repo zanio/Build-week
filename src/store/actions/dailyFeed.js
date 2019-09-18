@@ -20,14 +20,6 @@ export const clearFeed = () => {
 };
 
 
-export const setNextFeed = (feed, expirationDate) => {
-  localStorage.setItem('feed', feed);
-  localStorage.setItem('expirationDate', expirationDate);
-  return {
-    type: actionTypes.SET_NEXT_FEED,
-  };
-};
-
 export const checkFeedTimeOut = (expirationTime) => (dispatch) => {
   setTimeout(() => {
     dispatch(clearFeed());
@@ -50,11 +42,14 @@ export const FetchDailyFeedAction = () => (dispatch) => {
     },
   })
     .then((response) => {
-      const expiration = new Date(new Date().getTime() + getNextDay);
-      const newPost = randomizeFeed(response.data.data)
-      dispatch(setNextFeed(newPost, expiration));
+      const expiration = new Date(getNextDay());
+      const newPost = randomizeFeed(response.data.all);
+      const ParsePost = JSON.stringify(newPost);
+      const ParseExpiration = JSON.stringify(expiration);
+      localStorage.setItem('feed', ParsePost);
+      localStorage.setItem('expirationDate', ParseExpiration);
       dispatch(fetchDailyFeed(newPost));
-      dispatch(checkFeedTimeOut(getNextDay));
+      dispatch(checkFeedTimeOut(expiration));
     })
     .catch((err) => {
       dispatch(FecthFail(err));
@@ -62,16 +57,18 @@ export const FetchDailyFeedAction = () => (dispatch) => {
 };
 
 export const feedCheckState = () => (dispatch) => {
-  const feed = localStorage.getItem('feed');
+  const feed = JSON.parse(localStorage.getItem('feed'));
   if (!feed) {
     dispatch(FetchDailyFeedAction());
   } else {
-    const expirationDate = new Date(localStorage.getItem('expirationDate'));
+    const expirationDate = new Date(JSON.parse(localStorage.getItem('expirationDate')));
     if (expirationDate > new Date()) {
-      const feedPost = localStorage.getItem('feed');
+      const feedPost = JSON.parse(localStorage.getItem('feed'));
+      console.log(expirationDate > new Date(), feedPost);
       dispatch(fetchDailyFeed(feedPost));
     }
+    console.log(expirationDate.getTime() - new Date().getTime());
 
-    dispatch(checkFeedTimeOut(expirationDate.getTime() - new Date().getTime() / 1000));
+    dispatch(checkFeedTimeOut(expirationDate.getTime() - new Date().getTime()));
   }
 };

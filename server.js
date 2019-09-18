@@ -9,8 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 
 
-if (process.env.NODE_ENV === 'production') {
-
+if (process.env.NODE_ENV === 'development') {
   app.use(express.static('dist'));
   const path = require('path');
 
@@ -20,5 +19,5 @@ if (process.env.NODE_ENV === 'production') {
 }
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log('the server is runing on http://localhost:5000');
+  console.log('the server is runing on http://localhost:5000', process.env.NODE_ENV);
 });
