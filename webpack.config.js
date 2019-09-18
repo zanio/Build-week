@@ -1,8 +1,10 @@
 /* eslint-disable global-require */
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
+
   entry: './src/index.js',
   module: {
     rules: [
@@ -64,7 +66,8 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-  ],
+    new Dotenv(),
+],
   devServer: {
     contentBase: './dist',
     hot: true,

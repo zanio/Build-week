@@ -12,6 +12,7 @@ import Morefeed from '../containers/moreFeeds/morefeeds'
 
 
 const App = props => {
+  console.log(process.env.API_KEY)
   
    return (
      <React.Fragment>

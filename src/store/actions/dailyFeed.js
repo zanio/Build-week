@@ -17,10 +17,15 @@ export const FecthFail = (err) => ({
 
 export const FetchDailyFeedAction = () => (dispatch) => {
   dispatch(fetchStart());
-  const query = '/api/v1';
-  catAxios.get(query)
+  const query = '/facts';
+  catAxios.get(query, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-rapidapi-key': process.env.API_KEY,
+    },
+  })
     .then((response) => {
-      console.log(response.data.data)
       dispatch(fetchDailyFeed(response.data.data));
     })
     .catch((err) => {
