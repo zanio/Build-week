@@ -22,7 +22,7 @@
 }
 @media (max-width:760px){
     .Layout{
-        width:90%;
+        width:100%;
         margin: 0 auto;
         background-color:  rgba(233, 233, 247, 0.253);
         padding: 10px;

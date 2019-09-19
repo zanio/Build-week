@@ -6,7 +6,7 @@
 }
 
 .NavList a{
-    color: #8f5c2c;
+    color: white;
     text-decoration: none;
     width: 100%;
     font-family: 'Roboto';
@@ -18,7 +18,7 @@
 .NavList a:active,
 .NavList a.active{
    
-    color: #40a4c8;
+    color: rgba(255, 193, 241, 0.99);
 }
 
 @media(min-width:500px){
