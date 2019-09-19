@@ -6,18 +6,24 @@ import Spinner from '../../UI/Spinner/spinner';
 
 
 const FeedTemplate  = props =>{
-
-    if(props.data.length > 0){
-        props.data.map(p => {
-            text = (<div className={classes.Feed}>
-                <p>{p}</p>
-            </div>);
-        })
+    const {data, error, loading} = props;
+    let content = null;
+    if(data){
+       content = data.map(singleFeed=>(
+            <div key={singleFeed._id} className={ classes.Feed }>
+                <p>{singleFeed.text}</p>
+            </div>))
     }
-
+    if(error){
+        content = <p>error</p>
+    }
+    if(loading){
+        content = <Spinner />
+    }
 return(
     <React.Fragment>
-        {}
+
+        { content }
     </React.Fragment>
     )
   

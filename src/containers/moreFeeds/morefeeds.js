@@ -1,40 +1,59 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
 import classes from './morefeed.css'
 import FeedTemplates from '../../components/feedTemplate/feedTemplate'
-
+import Pagination from '../../components/Pagination/pagination'
+import paginate from '../../helper/paginate';
+import * as actionCreator from '../../store/actions/index';
 
 
 const Morefeed = (props) => {
 
+    //  pageSize is the number of Item to be displayed on each page
+
     useEffect(()=>{
-        props.onGetDailyFeed();
+        OnGetMoreFeed();
       },[]);
+
+    const [pageSize] = useState(30)
+    const [currentPage, setCurrentPage] = useState(1)
+
+    const { OnGetMoreFeed, Feeds,  Counts, errorMessage, loadingSpinner} = props
+    
+    const pageFeed = paginate(Feeds, currentPage, pageSize);
+
+    const handlePageChange = (page)=>{
+      return setCurrentPage(page)
+    }
+
 
 
     return(
         <React.Fragment>
-        <div className={classes.Body}>
-            <p className={classes.facts}>Gets Dialy Facts About Cats. 
-                Even if you don’t have a cat this facts would interest you to know!</p>
-        <FeedTemplates data = {props.feed} error = {props.errorMessage}  loading = {props.loadingSpinner}/>
+        <div className="container">
+        <FeedTemplates data = {pageFeed} error = {errorMessage}  loading = {loadingSpinner}/>
+        <Pagination itemsCount = {Counts} pageSize = {pageSize}
+        onPageChange = {handlePageChange} currentPage = {currentPage}
+        />
         </div>
+        
         </React.Fragment>
     )
 };
 
 const mapStateToProps = state =>{
     return {
-        loadingSpinner: state.DailyFeedReducer.loading,
-        errorMessage:state.DailyFeedReducer.error,
-        posts:state.DailyFeedReducer.data,
+        loadingSpinner: state.ManyFeedReducer.loading,
+        errorMessage:state.ManyFeedReducer.error,
+        Feeds:state.ManyFeedReducer.Feeds,
+        Counts: state.ManyFeedReducer.counts
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onGetDailyFeed: () => dispatch(actionCreator.FetchDailyFeedAction() ),
+        OnGetMoreFeed: () => dispatch(actionCreator.FetchManyFeedAction() ),
     }
 }
 

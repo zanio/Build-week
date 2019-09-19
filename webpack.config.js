@@ -66,12 +66,10 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        API_KEY: JSON.stringify(process.env.API_KEY),
-      },
-    })],
+    new Dotenv(),
+],
   devServer: {
+    historyApiFallback: true,
     contentBase: './dist',
     hot: true,
   },

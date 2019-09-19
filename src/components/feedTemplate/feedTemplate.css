@@ -1,16 +1,15 @@
 .Feed{
     border: 3px solid #1F4D67;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 27px;
+    border-radius: 10px;
     position: relative;
+    margin: 1rem 1rem;
 }
 
 .Feed p {
-    padding: 83px 65px 103px 63px;
+    padding: 1rem 2rem;
     font-family: 'Acme';
-    font-size: 1.3rem;
-    text-align: center;
-
+    font-size: 1.2rem;
 
 }
 
@@ -19,4 +18,5 @@
         padding: 1rem 3rem;
     
     }
+
 }

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import classes from './dailyfeed.css';
 import Feed from '../../components/feed/feed';
-import * as actionCreator from '../../store/actions/index';
 import Spinner from '../../UI/Spinner/spinner'
 
 
@@ -11,17 +10,16 @@ const DailyFeed = (props) => {
 
     let content = null;
 
-    if(props.loadingSpinner){
+   const { loadingSpinner, errorMessage, posts } = props
+    if(loadingSpinner){
         content = <Spinner/>
     }
-    if(props.errorMessage){
+    if(errorMessage){
         content = <Feed  error = {props.errorMessage.message}/>
     }
-    if(props.posts){
+    if(posts){
         content = <Feed  data= {props.posts[0].text}/>
     }
-    console.log(props.posts)
-
     return(
         <React.Fragment>
         <div className={classes.Body}>
