@@ -22,7 +22,6 @@ const FeedTemplate  = props =>{
     }
 return(
     <React.Fragment>
-
         { content }
     </React.Fragment>
     )

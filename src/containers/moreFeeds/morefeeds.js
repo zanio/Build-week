@@ -24,7 +24,9 @@ const Morefeed = (props) => {
     const pageFeed = paginate(Feeds, currentPage, pageSize);
 
     const handlePageChange = (page)=>{
-      return setCurrentPage(page)
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        return setCurrentPage(page)
     }
 
 

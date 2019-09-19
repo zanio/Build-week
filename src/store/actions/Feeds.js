@@ -26,7 +26,6 @@ export const clearFeed = () => {
 
 
 export const checkFeedTimeOut = (expirationTime) => (dispatch) => {
-  console.log(expirationTime);
   setTimeout(() => {
     dispatch(clearFeed());
   }, expirationTime * 1000);
