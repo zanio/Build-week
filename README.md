@@ -22,7 +22,7 @@ Ensure that you have nodejs and npm installed in your computer
 a. Clone this repository into your named folder
 
 ```bash
-git clone -b develop https://github.com/zanio/PropertyPro-lite.git .
+git clone -b develop https://github.com/zanio/Daily-Cats-Facts.git .
 git status
 ```
 
