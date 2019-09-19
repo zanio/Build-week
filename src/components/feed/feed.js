@@ -6,14 +6,18 @@ import classes from './feed.css';
 
 const Feed  = props =>{
 
-    const getDayTime = ()=>{
-        return Date.getTime()
+    const theDayFact = ()=>{
+        const date = new Date();
+        const Day = date.getDate();
+        const Month = date.getMonth()+1;
+        const Year = date.getFullYear();
+        return `Day ${Day}th Facts in ${Month}, ${Year}`
     }
 return(
     <React.Fragment>
         <div className={classes.Feed}>
             <div className={classes.triangle}></div>
-            <div className={classes.day}>Day 27th Facts in Sept, 2019</div>
+            <div className={classes.day}>{theDayFact()}</div>
             <p>{props.data ? props.data : props.error}</p>
         </div>
     </React.Fragment>
