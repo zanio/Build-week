@@ -7,11 +7,8 @@ import classes from './feed.css';
 const Feed  = props =>{
 
     const theDayFact = ()=>{
-        const date = new Date();
-        const Day = date.getDate();
-        const Month = date.getMonth()+1;
-        const Year = date.getFullYear();
-        return `Day ${Day}th Facts in ${Month}, ${Year}`
+        const date = new Date().toLocaleDateString();
+        return `Today's  Facts @ ${date}`
     }
 return(
     <React.Fragment>

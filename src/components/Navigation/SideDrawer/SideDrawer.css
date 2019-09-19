@@ -7,7 +7,7 @@
     top: 0;
     z-index: 200;
     background-color: #13435F;
-    box-shadow: -3px 4px 7px rgba(0, 0, 0, 0.15);
+    box-shadow: 3px 0px 30px rgba(6, 7, 22, 0.95);
     padding:32px 16px;
     box-sizing: border-box;
     transition: transform .5s ease-in;
@@ -34,5 +34,15 @@
 width: 60%;
 height: auto;
 margin-bottom: 32px;
+}
+
+.float{
+    float: right;
+margin: 1rem 1rem;
+}
+.float i{
+    font-size: 2.5rem;
+    color: #13435F;
+    cursor: pointer;
 }
 

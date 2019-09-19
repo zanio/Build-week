@@ -8,15 +8,15 @@ import SideDrawer from '../Navigation/SideDrawer/SideDrawer'
 const Layout  = props =>{
 
 const [showSideDrawer, setshowSideDrawer ] = useState(false);
-
 const sideDrawerToggleHandler = ()=>{
     setshowSideDrawer(!showSideDrawer)
 }
 return(
     <React.Fragment>
     <Toolbar close={sideDrawerToggleHandler} />
-    <SideDrawer open={showSideDrawer} close={sideDrawerToggleHandler}/>
-    <main className={classes.Layout}>{props.children}</main>
+{   showSideDrawer ? <SideDrawer open={showSideDrawer} close={sideDrawerToggleHandler}/>
+:null
+}    <main className={classes.Layout}>{props.children}</main>
     </React.Fragment>
     )
   
