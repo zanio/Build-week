@@ -21,7 +21,7 @@ const SideDrawer = (props)=>{
        <React.Fragment>
            
      <Backdrop content = {true} open = {props.open} click={props.close}>
-       <p className={classes.float}><i class="far fa-times-circle"></i></p></Backdrop>
+       <p className={classes.float}><i className="far fa-times-circle"></i></p></Backdrop>
     
    <div className={attachedSideDrawer.join(' ')} onClick={props.close}>
    

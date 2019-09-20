@@ -1,4 +1,4 @@
-import catAxios from '../../api/catInstance';
+import { factInstance } from '../../api/catInstance';
 import * as actionTypes from './actionTypes';
 import { getNextDay, randomizeFeed } from '../../helper/utility';
 
@@ -39,7 +39,7 @@ export const FecthFail = (err) => ({
 export const FetchDailyFeedAction = () => (dispatch) => {
   dispatch(fetchStart());
   const query = '/facts';
-  catAxios.get(query, {
+  factInstance.get(query, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ export const FetchDailyFeedAction = () => (dispatch) => {
 export const FetchManyFeedAction = () => (dispatch) => {
   dispatch(fetchStart());
   const query = '/facts';
-  catAxios.get(query, {
+  factInstance.get(query, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

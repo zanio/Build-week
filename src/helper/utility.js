@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 export const utility = (oldstate, elementState) => ({
   ...oldstate,
   ...elementState,
@@ -13,3 +14,6 @@ export const randomizeFeed = (array) => {
   const content = array.filter((n, i) => i == id);
   return content;
 };
+
+// eslint-disable-next-line no-return-assign
+export const HandleUrl = (url) => location.href = url;

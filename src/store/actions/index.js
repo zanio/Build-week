@@ -3,3 +3,7 @@ export {
   feedCheckState,
   FetchManyFeedAction,
 } from './Feeds';
+
+export {
+  FetchManyBreed,
+} from './breeds';

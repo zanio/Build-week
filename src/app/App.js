@@ -7,6 +7,7 @@ import Layout from '../components/layout/layout'
 import Footer from '../components/footer/footer';
 import DailyFeed from '../containers/dailyfield/dailyfeed'
 import Morefeed from '../containers/moreFeeds/morefeeds'
+import Breeds from '../containers/breeds/breed'
 import * as actionCreator from '../store/actions/index'
 
 
@@ -18,9 +19,9 @@ const App = props => {
   
   return (
      <React.Fragment>
-      <Layout>
-        
+      <Layout>   
       <Switch>
+      <Route path="/breeds"  component = {Breeds} />
       <Route path="/morefacts"  component = {Morefeed} />
       <Route path="/" exact component = {DailyFeed} />
       </Switch>

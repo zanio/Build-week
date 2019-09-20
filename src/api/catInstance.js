@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-const catInstance = axios.create({
+export const factInstance = axios.create({
   baseURL: 'https://brianiswu-cat-facts-v1.p.rapidapi.com',
 });
 
-export default catInstance;
+export const breedInstance = axios.create({
+  baseURL: 'https://api.thecatapi.com/v1/breeds',
+});

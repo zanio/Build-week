@@ -1,15 +1,12 @@
 import React, { Component }  from 'react';
 import classes from '../footer.css';
+import {HandleUrl} from '../../../helper/utility';
 
 
 const SocialMedia = () =>{
     const facebookUrl = 'https://web.facebook.com/akpan.aniefiok.90';
     const twitterUrl = 'https://twitter.com/NodeDeWeb';
     const githubUrl = 'https://twitter.com/NodeDeWeb';
-
-    const  HandleUrl = (url)=>{
-    return location.href = url
-    }
         return(
             <React.Fragment>
             <div>

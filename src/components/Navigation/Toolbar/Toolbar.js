@@ -5,6 +5,7 @@ import Hamburgger from '../Toolbar/Hambugger/Hamburgger';
 import classe from '../SideDrawer/SideDrawer.css';
 import SVG from 'react-inlinesvg';
 import logo from '../../../assets/icons/Cat Facts.svg';
+import {HandleUrl} from '../../../helper/utility'
 
 const Toolbar = (props)=>{
 
@@ -16,7 +17,7 @@ const Toolbar = (props)=>{
 
   return(  <header className={classes.Toolbar}>
         <Hamburgger  clicked ={props.close} />
-    <div className={classes.Logo}>
+    <div onClick={()=>HandleUrl('/')} className={classes.Logo}>
         <SVG src={logo} />
        </div>
         <nav className={classes.DesktopOnly}>
