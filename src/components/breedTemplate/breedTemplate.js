@@ -19,7 +19,7 @@ const BreedTemplate  = ({breeds, error, loading}) =>{
       </div>))
     }
     if(error){
-        content = <p>{error}</p>
+        content = <p>error</p>
     }
     if(loading){
         content = <Spinner />
