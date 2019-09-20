@@ -15,7 +15,7 @@ const BreedTemplate  = props =>{
         </div>
         <div className="card-body">
           <p className="card-text">{singleBreed.description}</p>
-          <a href={singleBreed.wikipedia_url} className="btn btn-primary">Read More</a>
+          <a href={singleBreed.wikipedia_url} className="btn btn-primary"> Read More</a>
         </div>
       </div>))
     }
