@@ -11,7 +11,7 @@ const BreedTemplate  = props =>{
        content = breeds.map(singleBreed=>(
         <div key={singleBreed.id} className="card mb-3 mt-2">
         <div className="card-header">
-        {singleBreed.name}
+        {singleBreed.name} <span class="badge badge-info">Life Span: {singleBreed.life_span} yrs </span>
         </div>
         <div className="card-body">
           <p className="card-text">{singleBreed.description}</p>

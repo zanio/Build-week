@@ -8,7 +8,7 @@ import paginate from '../../helper/paginate';
 import * as actionCreator from '../../store/actions/index';
 
 
-const Morefeed = (props) => {
+const MoreBreed = (props) => {
 
     //  pageSize is the number of Item to be displayed on each page
     const { OnGetBreeds, Breeds,  breedCounts, errorMessage, loadingSpinner} = props
@@ -36,7 +36,7 @@ const Morefeed = (props) => {
         <React.Fragment>
         <div className="container mt-3">
         <BreedTemplates breeds = {pageBreeds} error = {errorMessage}  loading = {loadingSpinner}/>
-        <Pagination itemsCount = {parseInt(breedCounts)} pageSize = {pageSize}
+        <Pagination itemsCount = {breedCounts ? parseInt(breedCounts):null} pageSize = {pageSize}
         onPageChange = {handlePageChange} currentPage = {currentPage}
         />
         </div>
@@ -60,5 +60,5 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Morefeed);
+export default connect(mapStateToProps,mapDispatchToProps)(MoreBreed);
 
