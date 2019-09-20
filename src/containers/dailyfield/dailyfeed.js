@@ -6,19 +6,17 @@ import Spinner from '../../UI/Spinner/spinner'
 
 
 
-const DailyFeed = (props) => {
+const DailyFeed = ({ loadingSpinner, errorMessage, posts }) => {
 
     let content = null;
-
-   const { loadingSpinner, errorMessage, posts } = props
     if(loadingSpinner){
         content = <Spinner/>
     }
     if(errorMessage){
-        content = <Feed  error = {props.errorMessage.message}/>
+        content = <Feed  error = {errorMessage.message}/>
     }
     if(posts){
-        content = <Feed  data= {props.posts[0].text}/>
+        content = <Feed  data= {posts[0].text}/>
     }
     return(
         <React.Fragment>

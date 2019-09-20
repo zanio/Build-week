@@ -5,8 +5,7 @@ import Spinner from '../../UI/Spinner/spinner';
 
 
 
-const FeedTemplate  = props =>{
-    const {data, error, loading} = props;
+const FeedTemplate  = ({data, error, loading}) =>{
     let content = null;
     if(data){
        content = data.map(singleFeed=>(

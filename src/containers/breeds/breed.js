@@ -8,11 +8,9 @@ import paginate from '../../helper/paginate';
 import * as actionCreator from '../../store/actions/index';
 
 
-const MoreBreed = (props) => {
+const MoreBreed = ({ OnGetBreeds, Breeds,  breedCounts, errorMessage, loadingSpinner}) => {
 
     //  pageSize is the number of Item to be displayed on each page
-    const { OnGetBreeds, Breeds,  breedCounts, errorMessage, loadingSpinner} = props
-
 
     useEffect(()=>{
         OnGetBreeds();

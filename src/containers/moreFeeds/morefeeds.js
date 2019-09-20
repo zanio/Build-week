@@ -8,7 +8,7 @@ import paginate from '../../helper/paginate';
 import * as actionCreator from '../../store/actions/index';
 
 
-const Morefeed = (props) => {
+const Morefeed = ({ OnGetMoreFeed, Feeds,  Counts, errorMessage, loadingSpinner}) => {
 
     //  pageSize is the number of Item to be displayed on each page
 
@@ -18,8 +18,6 @@ const Morefeed = (props) => {
 
     const [pageSize] = useState(30)
     const [currentPage, setCurrentPage] = useState(1)
-
-    const { OnGetMoreFeed, Feeds,  Counts, errorMessage, loadingSpinner} = props
     
     const pageFeed = paginate(Feeds, currentPage, pageSize);
 

@@ -4,14 +4,13 @@ import Spinner from '../../UI/Spinner/spinner';
 
 
 
-const BreedTemplate  = props =>{
-    const {breeds, error, loading} = props;
+const BreedTemplate  = ({breeds, error, loading}) =>{
     let content = null;
     if(breeds){
        content = breeds.map(singleBreed=>(
         <div key={singleBreed.id} className="card mb-3 mt-2">
         <div className="card-header">
-        {singleBreed.name} <span class="badge badge-info">Life Span: {singleBreed.life_span} yrs </span>
+        {singleBreed.name} <span className="badge badge-info">Life Span: {singleBreed.life_span} yrs </span>
         </div>
         <div className="card-body">
           <p className="card-text">{singleBreed.description}</p>
@@ -20,7 +19,7 @@ const BreedTemplate  = props =>{
       </div>))
     }
     if(error){
-        content = <p>error</p>
+        content = <p>{error}</p>
     }
     if(loading){
         content = <Spinner />

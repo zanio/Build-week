@@ -10,7 +10,7 @@ const SocialMedia = () =>{
         return(
             <React.Fragment>
             <div>
-            <p>Follow me on social media for more fun Application</p>
+            <p>Follow me to get more update</p>
             <div>
             <span className={classes.icon}>
                 <i onClick = {()=>HandleUrl(facebookUrl)} className="fab fa-facebook-square"></i>
