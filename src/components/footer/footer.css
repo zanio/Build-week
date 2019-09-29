@@ -1,9 +1,9 @@
 .Layout{
-    background-color: rgb(50, 50, 66);
     background-color: #13435F;
     padding: 4rem 5rem;
     color: whitesmoke;
     display: flex;
+    min-height: 300px;
     flex-direction: row;
     justify-content: space-between;
     font-family: 'Ubuntu';
@@ -25,6 +25,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        min-height: 400px;
+
     }
 }
 .left{

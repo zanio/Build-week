@@ -67,7 +67,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new Dotenv(),
-],
+  ],
   devServer: {
     historyApiFallback: true,
     contentBase: './dist',

@@ -31,7 +31,7 @@ const MoreBreed = ({ OnGetBreeds, Breeds,  breedCounts, errorMessage, loadingSpi
 
 
     return(
-        <React.Fragment>
+        <>
         <div className="container mt-3">
         <BreedTemplates breeds = {pageBreeds} error = {errorMessage}  loading = {loadingSpinner}/>
         <Pagination itemsCount = {breedCounts ? parseInt(breedCounts):null} pageSize = {pageSize}
@@ -39,7 +39,7 @@ const MoreBreed = ({ OnGetBreeds, Breeds,  breedCounts, errorMessage, loadingSpi
         />
         </div>
         
-        </React.Fragment>
+        </>
     )
 };
 

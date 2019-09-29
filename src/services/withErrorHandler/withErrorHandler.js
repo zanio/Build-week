@@ -56,7 +56,8 @@ const withErrorHandler = (WrapperComponent,Axios) => {
                 <Modal modalControl={this.state.error}
                 click={this.errorConfirmedHandler}>
                 
-                   <p style={{wordSpacing:'.009em',color:'red;',fontSize:'22px;'}}> {this.state.error? this.state.error.message:null} </p>
+                   <p style={{wordSpacing:'.009em',color:'red;',fontSize:'22px;'}}> {this.state.error?
+                     this.state.error.message:null} </p>
                     
                     </Modal>
             <WrapperComponent {...this.props} />

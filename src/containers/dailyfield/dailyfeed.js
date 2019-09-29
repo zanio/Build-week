@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import {Pagination, PaginationItem, PaginationLink} from 'reactstrap'
 import classes from './dailyfeed.css';
 import Feed from '../../components/feed/feed';
 import Spinner from '../../UI/Spinner/spinner'

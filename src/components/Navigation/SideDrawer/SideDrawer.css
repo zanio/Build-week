@@ -25,10 +25,13 @@
 
 .Open {
     transform: translateX(0);
+    transition: 20 ease-out;
 }
 
 .Closed {
     transform: translateX(-100%);
+    transition: 2s ease-in;
+
 }
 .Logo{
 width: 60%;
@@ -42,7 +45,7 @@ margin: 1rem 1rem;
 }
 .float i{
     font-size: 2.5rem;
-    color: #13435F;
     cursor: pointer;
+    color:white;
 }
 

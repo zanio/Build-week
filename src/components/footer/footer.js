@@ -10,7 +10,7 @@ import SocialMedia from './social/social'
 class Footer extends Component{
     render(){
         return(
-            <React.Fragment>
+            <>
                 <div className={classes.Layout}>
                 <SocialMedia />
                 <div>
@@ -20,7 +20,7 @@ class Footer extends Component{
                     <p>&copy; 2018 Aniefiok Akpan  </p>
                 </div>
                 </div>
-            </React.Fragment>
+            </>
             
         )
     }

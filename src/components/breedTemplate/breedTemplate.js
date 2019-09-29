@@ -1,4 +1,6 @@
 import React from 'react';
+import {UncontrolledAlert } from 'reactstrap'
+
 import Spinner from '../../UI/Spinner/spinner';
 
 
@@ -19,7 +21,7 @@ const BreedTemplate  = ({breeds, error, loading}) =>{
       </div>))
     }
     if(error){
-        content = <p>error</p>
+        content = <UncontrolledAlert  color="warning">{error.message}</UncontrolledAlert >
     }
     if(loading){
         content = <Spinner />

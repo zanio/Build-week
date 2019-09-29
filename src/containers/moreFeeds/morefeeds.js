@@ -22,8 +22,8 @@ const Morefeed = ({ OnGetMoreFeed, Feeds,  Counts, errorMessage, loadingSpinner}
     const pageFeed = paginate(Feeds, currentPage, pageSize);
 
     const handlePageChange = (page)=>{
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
         return setCurrentPage(page)
     }
 
@@ -57,5 +57,5 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Morefeed);
+export default connect(mapStateToProps, mapDispatchToProps)(Morefeed);
 

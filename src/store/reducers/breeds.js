@@ -27,10 +27,10 @@ const BreedReducers = (state = initialState, action) => {
 
       };
 
-    case actionTypes.FETCH_FAIL:
+    case actionTypes.BREED_FAIL:
       return {
         ...state,
-        error: action.err,
+        error: action.error,
         loading: false,
       };
 

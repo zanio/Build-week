@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Toolbar.css';
 import NavItem from '../NavigationItems/NavItem';
-import Hamburgger from '../Toolbar/Hambugger/Hamburgger';
+import Hamburgger from '../../Hambugger/Hamburgger';
 import classe from '../SideDrawer/SideDrawer.css';
 import SVG from 'react-inlinesvg';
 import logo from '../../../assets/icons/Cat Facts.svg';

@@ -12,12 +12,12 @@ const sideDrawerToggleHandler = ()=>{
     setshowSideDrawer(!showSideDrawer)
 }
 return(
-    <React.Fragment>
-    <Toolbar close={sideDrawerToggleHandler} />
+    <>
+    <Toolbar close = {sideDrawerToggleHandler} />
 {   showSideDrawer ? <SideDrawer open={showSideDrawer} close={sideDrawerToggleHandler}/>
 :null
 }    <main className={classes.Layout}>{props.children}</main>
-    </React.Fragment>
+    </>
     )
   
 }

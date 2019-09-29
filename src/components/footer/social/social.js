@@ -8,7 +8,7 @@ const SocialMedia = () =>{
     const twitterUrl = 'https://twitter.com/NodeDeWeb';
     const githubUrl = 'https://twitter.com/NodeDeWeb';
         return(
-            <React.Fragment>
+            <>
             <div>
             <p>Follow me to get more update</p>
             <div>
@@ -19,7 +19,7 @@ const SocialMedia = () =>{
                 </span>
             </div>
                 </div>
-            </React.Fragment>
+            </>
             
         )
 }

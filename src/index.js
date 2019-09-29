@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
+// import './assets/css/bootstrap.min.css'
+// import "./assets/css/paper-kit.css";
+// import "./assets/demo/demo.css";
+
 import { Provider } from 'react-redux';
 import {
  createStore, applyMiddleware, compose, combineReducers,

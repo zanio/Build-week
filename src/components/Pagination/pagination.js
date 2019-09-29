@@ -2,9 +2,11 @@ import React from 'react';
 import _  from 'lodash';
 
 import PropeTypes from 'prop-types';
+import {PaginationLink, PaginationItem, Pagination} from 'reactstrap'
+import classes from './pagination.css'
 
 
-const Pagination = ({ itemsCount, pageSize, onPageChange, currentPage }) => {
+const PaginationComponent = ({ itemsCount, pageSize, onPageChange, currentPage }) => {
 
 const pagesCount = Math.ceil(itemsCount / pageSize) ;
 
@@ -13,20 +15,21 @@ if(pagesCount === 1) return null;
 const pages = _.range(1, pagesCount + 1)
 
     return <nav>
-        <ul className = "pagination">
+        <Pagination className={classes.custom}>
     {pages.map(page => (
-        <li key = {page} className={page === currentPage ? "page-item active":"page-item"}>
-        <a onClick = {()=> onPageChange(page)} className="page-link">{page}</a>
-    </li>
+        <PaginationItem key = {page} className={page === currentPage ? "active":"page-item"}>
+        <PaginationLink onClick = {()=> onPageChange(page)} className="page-link">{page}</PaginationLink>
+    </PaginationItem>
     ))}
-        </ul>
+        </Pagination>
     </nav>;
+    
 
 }
 
-export default Pagination;
+export default PaginationComponent;
 
-Pagination.propTypes = { 
+PaginationComponent.propTypes = { 
     itemsCount: PropeTypes.number, 
     pageSize: PropeTypes.number, 
     onPageChange: PropeTypes.func, 

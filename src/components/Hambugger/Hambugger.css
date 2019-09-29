@@ -1,0 +1,53 @@
+.Humbugger{
+    display: flex;
+    flex-flow: column;
+    cursor: pointer;
+    
+   
+}
+.cancel{
+    display: flex;
+    flex-flow: column;
+    cursor: pointer;
+    margin-top: 20px;
+
+    
+   
+}
+.Humbugger span:nth-of-type(1),
+.Humbugger span:nth-child(2),
+.Humbugger span:nth-child(3){
+    width: 40px;
+    height: 3px;
+    background: white;
+    margin-bottom: 4px;
+ 
+}
+.cancel span:nth-child(1),
+.cancel span:nth-child(2){
+    width: 40px;
+    height: 5px;
+    background: white;
+ 
+}
+.cancel span:nth-child(1){
+    
+    transform: rotate(50deg);
+
+ 
+}
+.cancel span:nth-child(2){
+
+    transform: rotate(-50deg);
+
+ 
+}
+
+
+@media(min-width:500px){
+    .Humbugger{
+        display: none;
+    }
+}
+
+

@@ -1,15 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { NavLink, NavItem} from 'reactstrap'
 
 import classes from './NavList.css'
 
-const NavList = (props)=>(
-    
-            <li className={classes.NavList}>
-              <NavLink to={props.link} exact = {props.exact}
-              activeClassName={classes.active}
-              > {props.children} </NavLink>
-            </li>    
-);
+const NavList = ({link, children, location, close})=>{
+  return (
+            <NavItem className={classes.NavList}>
+              <NavLink to={link} tag={Link} onClick={close}
+              className={link === location.pathname ? classes.active : ''}
+              > {children} </NavLink>
+            </NavItem>    
+)};
 
-export default NavList;
+export default withRouter(NavList);

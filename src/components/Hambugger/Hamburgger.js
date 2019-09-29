@@ -9,4 +9,11 @@ const Hamburgger = (props)=>(
         <span></span>
     </div>
 )
+
+export const SidebarCancel =  (props)=>( 
+    <div className={classes.cancel} onClick={props.clicked}>
+            <span></span>
+            <span></span>
+        </div>
+    );
 export default Hamburgger;

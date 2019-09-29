@@ -15,10 +15,13 @@
 }
 
 .NavList a:hover,
-.NavList a:active,
-.NavList a.active{
+.NavList a:active{
    
     color: rgba(255, 193, 241, 0.99);
+}
+.NavList a.active{
+    color: rgba(255, 193, 241, 0.99);
+
 }
 
 @media(min-width:500px){
@@ -39,8 +42,5 @@
      
     }
     
-    .NavList a.active{
-        color: rgba(255, 193, 241, 0.99);
     
-    }
 }

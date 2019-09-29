@@ -1,4 +1,6 @@
 import React, { Component, useState } from 'react';
+import {Alert} from 'reactstrap'
+
 import classes from './feed.css';
 
 
@@ -15,7 +17,7 @@ return(
         <div className={classes.Feed}>
             <div className={classes.triangle}></div>
             <div className={classes.day}>{theDayFact()}</div>
-            <p>{props.data ? props.data : props.error}</p>
+            <p>{props.data ? props.data : <Alert className="mt-3" color="warning">{props.error}</Alert>}</p>
         </div>
     </React.Fragment>
     )

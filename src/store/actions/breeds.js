@@ -1,6 +1,5 @@
 import { breedInstance } from '../../api/catInstance';
 import * as actionTypes from './actionTypes';
-import { getNextDay, randomizeFeed } from '../../helper/utility';
 
 export const fetchStart = () => ({
   type: actionTypes.START_BREED_FETCH,
