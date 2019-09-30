@@ -15,7 +15,7 @@ import * as actionCreator from '../store/actions/index'
 const App = props => {  
   useEffect(()=>{
     props.onDeliverTodayFeed();
-  },[]);  
+  },[] ) 
   
   return (
      <React.Fragment>

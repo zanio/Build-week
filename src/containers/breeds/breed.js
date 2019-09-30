@@ -11,13 +11,17 @@ import * as actionCreator from '../../store/actions/index';
 const MoreBreed = ({ OnGetBreeds, Breeds,  breedCounts, errorMessage, loadingSpinner}) => {
 
     //  pageSize is the number of Item to be displayed on each page
+    const [pageSize] = useState(10)
+    const [currentPage, setCurrentPage] = useState(1)
 
     useEffect(()=>{
         OnGetBreeds();
+        return ()=>{
+            console.log('unmounting the dom')
+        }
       },[]);
 
-    const [pageSize] = useState(10)
-    const [currentPage, setCurrentPage] = useState(1)
+    
 
     
     const pageBreeds = paginate(Breeds, currentPage, pageSize);
@@ -32,7 +36,7 @@ const MoreBreed = ({ OnGetBreeds, Breeds,  breedCounts, errorMessage, loadingSpi
 
     return(
         <>
-        <div className="container mt-3">
+        <div className={classes.Body}>
         <BreedTemplates breeds = {pageBreeds} error = {errorMessage}  loading = {loadingSpinner}/>
         <Pagination itemsCount = {breedCounts ? parseInt(breedCounts):null} pageSize = {pageSize}
         onPageChange = {handlePageChange} currentPage = {currentPage}

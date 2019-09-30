@@ -19,8 +19,7 @@ const SideDrawer = (props)=>{
     
    return( 
      
-       <>
-           
+       <> 
            <Backdrop content = {true} open = {props.open}>
        <p className={classes.float}><SidebarCancel clicked = {props.close}/></p></Backdrop>
     

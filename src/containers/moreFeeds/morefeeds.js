@@ -31,7 +31,7 @@ const Morefeed = ({ OnGetMoreFeed, Feeds,  Counts, errorMessage, loadingSpinner}
 
     return(
         <React.Fragment>
-        <div className="container">
+        <div className={classes.Body}>
         <FeedTemplates data = {pageFeed} error = {errorMessage}  loading = {loadingSpinner}/>
         <Pagination itemsCount = {Counts} pageSize = {pageSize}
         onPageChange = {handlePageChange} currentPage = {currentPage}

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Acme|Lato|Pacifico|Roboto:400,500|Ubuntu:400,500&display=swap');
 @import url('//use.fontawesome.com/releases/v5.6.3/css/all.css');
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 .pt-1{
   padding-top: 1rem;
   }
@@ -110,9 +111,11 @@ body {
     color: black;
     font-family: 'Roboto'
   }
-  .green{
-    background-color: red !important;
+  .pacifico{
+    font-family: 'Pacifico';
   }
+  
+  
   
  @media(min-width:1000px){
   .flex-row{

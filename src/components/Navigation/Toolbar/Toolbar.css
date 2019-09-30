@@ -14,6 +14,20 @@
     box-shadow: -3px 4px 7px rgba(0, 0, 0, 0.349);
 
 }
+.transparent{
+    /* height: 72px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color:  rgba(233, 233, 247, 0.253);
+
+}
+.transparent nav ul li a{
+    color: #13435F;
+
+}
 
 .Toolbar nav{
     height: 100%;
@@ -34,4 +48,10 @@
     }
    
     
+}
+.pacifico{
+    font-family: 'Pacifico';
+    font-size: 2.3rem;
+    color: #13435F;
+
 }
