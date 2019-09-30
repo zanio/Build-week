@@ -17,10 +17,10 @@
 .NavList a:hover,
 .NavList a:active{
    
-    color: rgba(255, 193, 241, 0.99);
+    color: rgb(240, 134, 187);
 }
 .NavList a.active{
-    color: rgba(255, 193, 241, 0.99);
+    color: rgb(240, 134, 187);
 
 }
 
