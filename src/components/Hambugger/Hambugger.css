@@ -64,6 +64,9 @@
 
 
 @media(min-width:500px){
+    .Humbuggerwhite{
+        display: none;
+    }
     .Humbugger{
         display: none;
     }
