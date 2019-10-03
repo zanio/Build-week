@@ -51,13 +51,13 @@
 }
 .cancel span:nth-child(1){
     
-    transform: rotate(50deg);
+    transform: rotate(45deg);
+
 
  
 }
 .cancel span:nth-child(2){
-
-    transform: rotate(-50deg);
+    transform: rotate(-45deg);
 
  
 }

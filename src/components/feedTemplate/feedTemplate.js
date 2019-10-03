@@ -13,6 +13,7 @@ const FeedTemplate  = ({data, error, loading}) =>{
             <div key = {singleFeed._id} className={ classes.Feed }>
                 <p>{singleFeed.text}</p>
             </div>))
+
     }
     if(error){
         content = <UncontrolledAlert className="mt-3"  color="warning">{error.message}</UncontrolledAlert >
@@ -21,9 +22,9 @@ const FeedTemplate  = ({data, error, loading}) =>{
         content = <Spinner />
     }
 return(
-    <React.Fragment>
+    <>
         { content }
-    </React.Fragment>
+    </>
     )
   
 }

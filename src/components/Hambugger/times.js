@@ -3,9 +3,9 @@ import classes from './Hambugger.css';
 
 
 const SidebarCancel =  (props)=>( 
-    <div className={classes.cancel} onClick={props.clicked}>
+    <span className={classes.cancel} onClick={props.clicked}>
             <span></span>
             <span></span>
-        </div>
+        </span>
     );
 export default SidebarCancel;

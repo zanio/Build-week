@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import classes from './SideDrawer.css';
 // import Logo from '../../Logo/Logo';
@@ -7,29 +7,31 @@ import SidebarCancel from '../../Hambugger/times';
 import Backdrop from '../../../UI/Backdrop/Backdrop';
 import SVG from 'react-inlinesvg';
 import logo from '../../../assets/icons/Cat Facts.svg';
+import { tsPropertySignature } from '@babel/types';
 
 
-const SideDrawer = (props)=>{
+const SideDrawer = ({open, close})=>{
 
     let attachedSideDrawer = [classes.SideDrawer, classes.Closed]
-
-     if(props.open){
+     if(open){
         attachedSideDrawer = [classes.SideDrawer, classes.Open]
+        
      }
+
     
    return( 
      
        <> 
-           <Backdrop content = {true} open = {props.open}>
-       <p className={classes.float}><SidebarCancel clicked = {props.close}/></p></Backdrop>
+        <Backdrop content = {true} open = {open}>
+       <p className={classes.float}><SidebarCancel clicked = {close}/></p></Backdrop>
     
-   <div className={attachedSideDrawer.join(' ')} >
+   <div id="remove" className={attachedSideDrawer.join(' ')} >
    
         <div className = {classes.Logo}> 
         <SVG src={logo} />
         </div>
             <nav>
-            <NavItem close={props.close}/>
+            <NavItem close={close}/>
             </nav>
         </div>
         
