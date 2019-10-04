@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Route, Switch,withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import classes from '../components/layout/layout.css';
 import Layout from '../components/layout/layout'
 import Footer from '../components/footer/footer';
 import DailyFeed from '../containers/dailyfield/dailyfeed'
@@ -24,6 +23,7 @@ const App = props => {
       <Route path="/breeds"  component = {Breeds} />
       <Route path="/morefacts"  component = {Morefeed} />
       <Route path="/" exact component = {DailyFeed} />
+      <Route path="/*"  render = { () => (<p>unknown route</p>)} />
       </Switch>
       </Layout>
       <Footer />

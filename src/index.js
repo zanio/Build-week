@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import './index.css';
+
 // import './assets/css/bootstrap.min.css'
 // import "./assets/css/paper-kit.css";
 // import "./assets/demo/demo.css";
@@ -12,7 +14,6 @@ import {
 import thunk from 'redux-thunk';
 
 import App from './app/App';
-import './index.css';
 
 import AppReducer from './store/reducers';
 

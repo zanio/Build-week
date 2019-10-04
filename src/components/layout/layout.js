@@ -5,7 +5,7 @@ import SideDrawer from '../Navigation/SideDrawer/SideDrawer'
 
 
 
-const Layout  = props =>{
+const Layout  = ({children}) =>{
 
 const [showSideDrawer, setshowSideDrawer ] = useState(false);
 
@@ -16,7 +16,7 @@ return(
     <>
     <Toolbar close = {sideDrawerToggleHandler} />
 <SideDrawer open={showSideDrawer} close={sideDrawerToggleHandler}/>
-    <main className={classes.Layout}>{props.children}</main>
+    <main className={classes.Layout}>{children}</main>
     </>
     )
   

@@ -6,12 +6,12 @@ import { connect } from 'react-redux';
 
 
 
-const NavItem = (props)=>(
+const NavItem = ({close})=>(
 
     <ul className={classes.NavItem} > 
-    <NavList close={props.close} link="/"> Daily Cat Feed </NavList>
-      <NavList close={props.close} link="/morefacts"> More Facts </NavList>
-      <NavList close={props.close} link="/breeds" > Cat Breads </NavList>
+    <NavList close={close} link="/"> Daily Cat Feed </NavList>
+      <NavList close={close} link="/morefacts"> More Facts </NavList>
+      <NavList close={close} link="/breeds" > Cat Breads </NavList>
     </ul>
 
 );

@@ -9,7 +9,7 @@ const SocialMedia = () =>{
     const githubUrl = 'https://twitter.com/NodeDeWeb';
         return(
             <>
-            <div>
+            <div class="width-20">
             <p>Follow me to get more update</p>
             <div>
             <span className={classes.icon}>
